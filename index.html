@@ -1,38 +1,41 @@
-<h1>Georgia Skunk Ape Tracker</h1>
+<!DOCTYPE html>
 
-<p>Latest Sightings:</p>
+<html>
 
-<ul id="sightings">
-</ul>
+<head>
 
-<button onclick="addSighting()">
-Report Sighting
+<title>Southeast Skunk Ape Tracker</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>Southeast Skunk Ape Tracker</h1>
+
+<p>Tracking cryptid activity across the Deep South.</p>
+
+<h2>Report a Sighting</h2>
+
+<p>Your Name:</p>
+<input type="text">
+
+<p>Location of Sighting:</p>
+<input type="text">
+
+<p>Describe What You Saw:</p>
+<textarea rows="6" cols="40"></textarea>
+
+<p>Upload Evidence Photo:</p>
+<input type="file">
+
+<br><br>
+
+<button>
+Submit Sighting
 </button>
 
-<script>
+</body>
 
-function addSighting() {
-
-    let places = [
-        "Okefenokee Swamp",
-        "North Georgia Mountains",
-        "Near Macon",
-        "Outside Savannah",
-        "Deep woods near Athens"
-    ];
-
-    let randomPlace =
-        places[Math.floor(Math.random() * places.length)];
-
-    let newSighting =
-        document.createElement("li");
-
-    newSighting.textContent =
-        "Possible Skunk Ape spotted at " + randomPlace;
-
-    document
-        .getElementById("sightings")
-        .appendChild(newSighting);
-}
-
-</script>
+</html>
