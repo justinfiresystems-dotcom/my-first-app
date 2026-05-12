@@ -1,92 +1,102 @@
-body {
+<!DOCTYPE html>
 
-    background-image: url("background.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+<html>
 
-    background-color: black;
+<head>
 
-    color: #70ff70;
+<title>Southeast Skunk Ape Tracker</title>
 
-    font-family: Courier New, monospace;
+<link rel="stylesheet" href="style.css">
 
-    padding: 20px;
+</head>
 
-    text-shadow: 0 0 5px #70ff70;
+<body>
+
+<h1>Southeast Skunk Ape Tracker</h1>
+
+<p>Tracking cryptid activity across the Deep South.</p>
+
+<h2>Report a Sighting</h2>
+
+<p>Your Name:</p>
+<input type="text" id="name">
+
+<p>Location of Sighting:</p>
+<input type="text" id="location">
+
+<p>Describe What You Saw:</p>
+<textarea rows="6" cols="40" id="story"></textarea>
+
+<p>Upload Evidence Photo:</p>
+<input type="file" id="photo">
+
+<br><br>
+
+<button onclick="submitSighting()">
+Submit Sighting
+</button>
+
+<hr>
+
+<h2>Evidence Board</h2>
+
+<div id="board"></div>
+
+<script>
+
+function submitSighting() {
+
+    let name =
+        document.getElementById("name").value;
+
+    let location =
+        document.getElementById("location").value;
+
+    let story =
+        document.getElementById("story").value;
+
+    let photo =
+        document.getElementById("photo").files[0];
+
+    let board =
+        document.getElementById("board");
+
+    let card =
+        document.createElement("div");
+
+    card.style.border = "1px solid #70ff70";
+    card.style.padding = "10px";
+    card.style.marginTop = "20px";
+
+    let time =
+        new Date().toLocaleString();
+
+    card.innerHTML =
+        "<h3>" + location + "</h3>" +
+        "<p><strong>Witness:</strong> " + name + "</p>" +
+        "<p><strong>Time:</strong> " + time + "</p>" +
+        "<p>" + story + "</p>";
+
+    if (photo) {
+
+        let image =
+            document.createElement("img");
+
+        image.style.width = "300px";
+        image.style.display = "block";
+        image.style.marginTop = "10px";
+
+        image.src =
+            URL.createObjectURL(photo);
+
+        card.appendChild(image);
+    }
+
+    board.appendChild(card);
 }
 
-body::before {
+</script>
 
-    content: "";
+</body>
 
-    position: fixed;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background:
-    repeating-linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.15),
-        rgba(0,0,0,0.15) 2px,
-        transparent 2px,
-        transparent 4px
-    );
-
-    pointer-events: none;
-}
-
-h1 {
-
-    font-size: 60px;
-
-    text-shadow:
-    0 0 10px #70ff70,
-    0 0 20px #70ff70;
-}
-
-button {
-
-    background-color: rgba(0,0,0,0.8);
-
-    color: #70ff70;
-
-    border: 1px solid #70ff70;
-
-    padding: 10px;
-
-    font-family: Courier New, monospace;
-
-    cursor: pointer;
-}
-
-button:hover {
-
-    background-color: #70ff70;
-
-    color: black;
-}
-
-input,
-textarea {
-
-    background-color: rgba(0,0,0,0.8);
-
-    color: #70ff70;
-
-    border: 1px solid #70ff70;
-
-    padding: 5px;
-}
-
-#board div {
-
-    background-color: rgba(0,0,0,0.8);
-
-    box-shadow: 0 0 15px #70ff70;
-}
-
+</html>
