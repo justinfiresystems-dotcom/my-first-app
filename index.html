@@ -44,6 +44,8 @@ Submit Sighting
 
 <script>
 
+let selectedCard = null;
+
 function submitSighting() {
 
     let name =
@@ -64,9 +66,7 @@ function submitSighting() {
     let card =
         document.createElement("div");
 
-    card.style.border = "1px solid #70ff70";
-    card.style.padding = "10px";
-    card.style.marginTop = "20px";
+    card.classList.add("card");
 
     let time =
         new Date().toLocaleString();
@@ -83,7 +83,9 @@ function submitSighting() {
             document.createElement("img");
 
         image.style.width = "300px";
+
         image.style.display = "block";
+
         image.style.marginTop = "10px";
 
         image.src =
@@ -92,10 +94,34 @@ function submitSighting() {
         card.appendChild(image);
     }
 
+    card.onclick = function() {
+
+        if (selectedCard == null) {
+
+            selectedCard = card;
+
+            card.classList.add("selected");
+        }
+
+        else if (selectedCard !== card) {
+
+            let line =
+                document.createElement("div");
+
+            line.classList.add("connection");
+
+            board.insertBefore(line, card);
+
+            selectedCard.classList.remove("selected");
+
+            selectedCard = null;
+        }
+    }
+
     board.appendChild(card);
 }
 
-<script>
+</script>
 
     let location =
         document.getElementById("location").value;
