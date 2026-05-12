@@ -105,17 +105,48 @@ function submitSighting() {
 
         else if (selectedCard !== card) {
 
-            let line =
-                document.createElement("div");
+          let line =
+    document.createElement("div");
 
-            line.classList.add("connection");
+line.classList.add("connection");
 
-            board.insertBefore(line, card);
+let x1 =
+    selectedCard.offsetLeft + 110;
 
-            selectedCard.classList.remove("selected");
+let y1 =
+    selectedCard.offsetTop + 110;
 
-            selectedCard = null;
-        }
+let x2 =
+    card.offsetLeft + 110;
+
+let y2 =
+    card.offsetTop + 110;
+
+let length =
+    Math.sqrt(
+        ((x2 - x1) ** 2) +
+        ((y2 - y1) ** 2)
+    );
+
+let angle =
+    Math.atan2(
+        y2 - y1,
+        x2 - x1
+    ) * 180 / Math.PI;
+
+line.style.width =
+    length + "px";
+
+line.style.left =
+    x1 + "px";
+
+line.style.top =
+    y1 + "px";
+
+line.style.transform =
+    "rotate(" + angle + "deg)";
+
+board.appendChild(line);
     }
 card.style.left =
     100 + Math.random() * 1200 + "px";
