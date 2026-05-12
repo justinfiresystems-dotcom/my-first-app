@@ -1,5 +1,38 @@
-<h1>Justin's First Website</h1>
+<h1>Georgia Skunk Ape Tracker</h1>
 
-<p>I built this myself using GitHub.</p>
+<p>Latest Sightings:</p>
 
-<button>Click Me</button>
+<ul id="sightings">
+</ul>
+
+<button onclick="addSighting()">
+Report Sighting
+</button>
+
+<script>
+
+function addSighting() {
+
+    let places = [
+        "Okefenokee Swamp",
+        "North Georgia Mountains",
+        "Near Macon",
+        "Outside Savannah",
+        "Deep woods near Athens"
+    ];
+
+    let randomPlace =
+        places[Math.floor(Math.random() * places.length)];
+
+    let newSighting =
+        document.createElement("li");
+
+    newSighting.textContent =
+        "Possible Skunk Ape spotted at " + randomPlace;
+
+    document
+        .getElementById("sightings")
+        .appendChild(newSighting);
+}
+
+</script>
