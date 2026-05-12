@@ -19,22 +19,83 @@
 <h2>Report a Sighting</h2>
 
 <p>Your Name:</p>
-<input type="text">
+<input type="text" id="name">
 
 <p>Location of Sighting:</p>
-<input type="text">
+<input type="text" id="location">
 
 <p>Describe What You Saw:</p>
-<textarea rows="6" cols="40"></textarea>
+<textarea rows="6" cols="40" id="story"></textarea>
 
 <p>Upload Evidence Photo:</p>
-<input type="file">
+<input type="file" id="photo">
 
 <br><br>
 
-<button>
+<button onclick="submitSighting()">
 Submit Sighting
 </button>
+
+<hr>
+
+<h2>Evidence Board</h2>
+
+<div id="board"></div>
+
+<script>
+
+function submitSighting() {
+
+    let name =
+        document.getElementById("name").value;
+
+    let location =
+        document.getElementById("location").value;
+
+    let story =
+        document.getElementById("story").value;
+
+    let photo =
+        document.getElementById("photo").files[0];
+
+    let board =
+        document.getElementById("board");
+
+    let card =
+        document.createElement("div");
+
+    card.style.border = "1px solid #70ff70";
+    card.style.padding = "10px";
+    card.style.marginTop = "20px";
+
+    let time =
+        new Date().toLocaleString();
+
+    card.innerHTML =
+        "<h3>" + location + "</h3>" +
+        "<p><strong>Witness:</strong> " + name + "</p>" +
+        "<p><strong>Time:</strong> " + time + "</p>" +
+        "<p>" + story + "</p>";
+
+    if (photo) {
+
+        let image =
+            document.createElement("img");
+
+        image.style.width = "300px";
+        image.style.display = "block";
+        image.style.marginTop = "10px";
+
+        image.src =
+            URL.createObjectURL(photo);
+
+        card.appendChild(image);
+    }
+
+    board.appendChild(card);
+}
+
+</script>
 
 </body>
 
