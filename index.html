@@ -45,6 +45,7 @@ Submit Sighting
 <script>
 
 let selectedCard = null;
+    let cardCount = 0;
 
 function submitSighting() {
 
@@ -148,11 +149,19 @@ line.style.transform =
 
 board.appendChild(line);
     }
+let column =
+    cardCount % 4;
+
+let row =
+    Math.floor(cardCount / 4);
+
 card.style.left =
-    100 + Math.random() * 1200 + "px";
+    (80 + column * 320) + "px";
 
 card.style.top =
-    50 + Math.random() * 900 + "px";
+    (80 + row * 320) + "px";
+
+card Count++;
     
     board.appendChild(card);
 }
