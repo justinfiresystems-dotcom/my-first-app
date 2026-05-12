@@ -86,25 +86,34 @@ textarea {
 
     position: relative;
 
-    background-color: rgba(0,0,0,0.85);
+    background-color: rgba(0,0,0,0.88);
 
-    border: 1px solid #70ff70;
+    border: 2px solid #70ff70;
 
     padding: 10px;
 
-    margin: 20px;
+    margin: 30px;
 
-    width: 300px;
+    width: 260px;
+
+    min-height: 250px;
 
     display: inline-block;
 
     vertical-align: top;
 
-    box-shadow: 0 0 15px #70ff70;
+    box-shadow:
+    0 0 15px #70ff70,
+    0 0 30px rgba(0,255,0,0.3);
 
     cursor: pointer;
-}
 
+    transform: rotate(
+        calc((var(--rotation, 0)) * 1deg)
+    );
+
+    transition: 0.3s;
+}
 .card.selected {
 
     border: 2px solid red;
