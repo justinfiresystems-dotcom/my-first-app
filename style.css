@@ -167,3 +167,191 @@ textarea {
 
     margin-top: 30px;
 }
+# Add a 1990s Security Camera Video Box
+
+Add this directly UNDER your main title section in `index.html`.
+
+Replace this:
+
+```html
+<h1>Southeast Skunk Ape Tracker</h1>
+
+<p>Tracking cryptid activity across the Deep South.</p>
+```
+
+WITH THIS:
+
+```html
+<div class="top-section">
+
+    <div>
+
+        <h1>Southeast Skunk Ape Tracker</h1>
+
+        <p>Tracking cryptid activity across the Deep South.</p>
+
+    </div>
+
+    <div class="video-monitor">
+
+        <video autoplay muted loop playsinline>
+
+            <source src="skunkape.mp4" type="video/mp4">
+
+        </video>
+
+        <p class="monitor-label">
+            SECURITY FEED - CAMERA 04
+        </p>
+
+    </div>
+
+</div>
+```
+
+---
+
+# Add This To `style.css`
+
+Paste this near the bottom of your CSS.
+
+```css
+.top-section {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 40px;
+}
+
+.video-monitor {
+
+    width: 420px;
+
+    background-color: rgba(0,0,0,0.95);
+
+    border: 3px solid #70ff70;
+
+    padding: 10px;
+
+    box-shadow:
+        0 0 20px #70ff70,
+        0 0 40px rgba(0,255,0,0.3);
+
+    transform: rotate(-1deg);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.video-monitor video {
+
+    width: 100%;
+
+    filter:
+        brightness(0.7)
+        contrast(1.3)
+        saturate(0.6)
+        blur(0.3px);
+}
+
+.video-monitor::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.15),
+            rgba(0,0,0,0.15) 2px,
+            transparent 2px,
+            transparent 4px
+        );
+
+    pointer-events: none;
+}
+
+.monitor-label {
+
+    color: red;
+
+    font-size: 14px;
+
+    margin-top: 8px;
+
+    text-shadow: 0 0 10px red;
+
+    letter-spacing: 2px;
+}
+```
+
+---
+
+# Add The Video File
+
+Upload a video file into your GitHub repo named:
+
+```text
+skunkape.mp4
+```
+
+The file must be in the SAME location as:
+
+* `index.html`
+* `style.css`
+
+---
+
+# Where To Get The Clip
+
+You can:
+
+* use your own edited footage
+* use a short royalty-free forest/security clip
+* create a fake VHS clip with AI tools
+* convert a GIF into MP4
+
+Keep it:
+
+* 5–10 seconds
+* grainy
+* dark
+* low quality
+* security-camera style
+
+Looping works automatically because of:
+
+```html
+loop
+```
+
+inside the video tag.
+
+---
+
+# Optional Extra Effects Later
+
+You can later add:
+
+* VHS timestamp overlays
+* static flicker
+* camera labels
+* fake motion detection
+* blinking REC icon
+* distorted audio
+* CRT monitor glow
+* multiple security feeds
+* weather warnings
+* police radio chatter
