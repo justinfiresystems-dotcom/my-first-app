@@ -78,28 +78,13 @@ function submitSighting() {
         "<p><strong>Time:</strong> " + time + "</p>" +
         "<p>" + story + "</p>";
 
-    if (photo) {
 
-        let image =
-            document.createElement("img");
-
-        image.style.width = "300px";
-
-        image.style.display = "block";
-
-        image.style.marginTop = "10px";
-
-        image.src =
-            URL.createObjectURL(photo);
-
-        card.appendChild(image);
-    }
 if (photo) {
 
     let image =
         document.createElement("img");
 
-    image.style.width = "300px";
+    image.style.width = "160px";
 
     image.style.display = "block";
 
@@ -110,60 +95,67 @@ if (photo) {
 
     card.appendChild(image);
 }
-    card.onclick = function() {
 
-        if (selectedCard == null) {
+card.onclick = function() {
 
-            selectedCard = card;
+    if (selectedCard == null) {
 
-            card.classList.add("selected");
-        }
+        selectedCard = card;
 
-        else if (selectedCard !== card) {
-
-          let line =
-    document.createElement("div");
-
-line.classList.add("connection");
-
-let x1 =
-    selectedCard.offsetLeft + 110;
-
-let y1 =
-    selectedCard.offsetTop + 110;
-
-let x2 =
-    card.offsetLeft + 110;
-
-let y2 =
-    card.offsetTop + 110;
-
-let length =
-    Math.sqrt(
-        ((x2 - x1) ** 2) +
-        ((y2 - y1) ** 2)
-    );
-
-let angle =
-    Math.atan2(
-        y2 - y1,
-        x2 - x1
-    ) * 180 / Math.PI;
-
-line.style.width =
-    length + "px";
-
-line.style.left =
-    x1 + "px";
-
-line.style.top =
-    y1 + "px";
-
-line.style.transform =
-    "rotate(" + angle + "deg)";
-
-board.appendChild(line);
+        card.classList.add("selected");
     }
+
+    else if (selectedCard !== card) {
+
+        let line =
+            document.createElement("div");
+
+        line.classList.add("connection");
+
+        let x1 =
+            selectedCard.offsetLeft + 110;
+
+        let y1 =
+            selectedCard.offsetTop + 110;
+
+        let x2 =
+            card.offsetLeft + 110;
+
+        let y2 =
+            card.offsetTop + 110;
+
+        let length =
+            Math.sqrt(
+                ((x2 - x1) ** 2) +
+                ((y2 - y1) ** 2)
+            );
+
+        let angle =
+            Math.atan2(
+                y2 - y1,
+                x2 - x1
+            ) * 180 / Math.PI;
+
+        line.style.width =
+            length + "px";
+
+        line.style.left =
+            x1 + "px";
+
+        line.style.top =
+            y1 + "px";
+
+        line.style.transform =
+            "rotate(" + angle + "deg)";
+
+        board.appendChild(line);
+
+        selectedCard.classList.remove("selected");
+
+        selectedCard = null;
+    }
+}
+
 let column =
     cardCount % 4;
 
@@ -177,11 +169,15 @@ card.style.top =
     (80 + row * 320) + "px";
 
 cardCount++;
-    
-    board.appendChild(card);
+
+board.appendChild(card);
 }
 
 </script>
+
+</body>
+
+</html>
 
 </body>
 
