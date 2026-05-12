@@ -94,7 +94,22 @@ function submitSighting() {
 
         card.appendChild(image);
     }
+if (photo) {
 
+    let image =
+        document.createElement("img");
+
+    image.style.width = "300px";
+
+    image.style.display = "block";
+
+    image.style.marginTop = "10px";
+
+    image.src =
+        URL.createObjectURL(photo);
+
+    card.appendChild(image);
+}
     card.onclick = function() {
 
         if (selectedCard == null) {
