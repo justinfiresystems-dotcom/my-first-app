@@ -82,7 +82,40 @@ textarea {
 
     padding: 5px;
 }
+.card {
 
+    position: relative;
+
+    background-color: rgba(0,0,0,0.8);
+
+    border: 1px solid #70ff70;
+
+    padding: 10px;
+
+    margin-top: 20px;
+
+    box-shadow: 0 0 15px #70ff70;
+
+    cursor: pointer;
+}
+
+.card.selected {
+
+    border: 2px solid red;
+
+    box-shadow: 0 0 20px red;
+}
+
+.connection {
+
+    height: 4px;
+
+    background: red;
+
+    margin: 10px 0;
+
+    box-shadow: 0 0 10px red;
+}
 #board div {
 
     background-color: rgba(0,0,0,0.8);
