@@ -116,16 +116,20 @@ textarea {
 }
 .card.selected {
 
-    border: 2px solid red;
+    border: 3px solid red;
 
-    box-shadow: 0 0 20px red;
+    box-shadow:
+    0 0 20px red,
+    0 0 40px rgba(255,0,0,0.5);
+
+    transform: scale(1.03);
 }
 
 .connection {
 
-    width: 120px;
+    width: 140px;
 
-    height: 6px;
+    height: 8px;
 
     background: red;
 
@@ -133,13 +137,21 @@ textarea {
 
     vertical-align: middle;
 
-    margin: 20px -10px;
+    margin: 0 -20px;
 
-    box-shadow: 0 0 15px red;
+    box-shadow:
+    0 0 10px red,
+    0 0 20px rgba(255,0,0,0.5);
+
+    transform: rotate(-8deg);
 }
 #board div {
 
     background-color: rgba(0,0,0,0.8);
 
     box-shadow: 0 0 15px #70ff70;
+}
+#board {
+
+    padding-top: 30px;
 }
