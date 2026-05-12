@@ -156,17 +156,17 @@ card.onclick = function() {
     }
 }
 
-let column =
-    cardCount % 3;
+let randomX =
+    Math.floor(Math.random() * 700);
 
-let row =
-    Math.floor(cardCount / 4);
+let randomY =
+    Math.floor(Math.random() * 500);
 
 card.style.left =
-    (80 + column * 320) + "px";
+    (50 + randomX) + "px";
 
 card.style.top =
-    (80 + row * 320) + "px";
+    (50 + randomY) + "px";
 
 cardCount++;
 
