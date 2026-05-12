@@ -114,32 +114,23 @@ textarea {
 
     transform: scale(1.03);
 }
-
 .connection {
 
-    width: 180px;
+    position: absolute;
 
-    height: 12px;
+    height: 6px;
 
-    background: #ff0000;
-
-    display: inline-block;
-
-    vertical-align: middle;
-
-    margin: 0 -30px;
-
-    border-radius: 20px;
+    background: red;
 
     box-shadow:
-    0 0 15px red,
-    0 0 30px red,
-    0 0 60px rgba(255,0,0,0.9);
+    0 0 10px red,
+    0 0 20px red;
 
-    transform: rotate(-10deg);
+    transform-origin: left center;
 
-    border: 2px solid #ff6666;
+    z-index: 1;
 }
+
 #board div {
 
     background-color: rgba(0,0,0,0.8);
