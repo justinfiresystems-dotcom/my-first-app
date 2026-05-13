@@ -504,9 +504,9 @@ inside the video tag.
 }
 .video-monitor {
 
-    width: 190px;
+    width: 280px;
 
-    padding: 3px;
+    padding: 4px;
 
     background-color: black;
 
@@ -518,18 +518,11 @@ inside the video tag.
 
     position: absolute;
 
-    top: 45px;
+    top: 40px;
 
-    left: 620px;
+    left: 520px;
 
     overflow: hidden;
-}
 
-.video-monitor img {
-
-    width: 100%;
-
-    display: block;
-
-    border: none;
+    z-index: 5;
 }
