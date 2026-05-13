@@ -499,10 +499,14 @@ inside the video tag.
 
 .video-monitor img {
 
-    width: 260px;
+    width: 260px !important;
+
+    height: 200px !important;
+
+    object-fit: cover;
 
     display: block;
-
+}
     border: 3px solid #70ff70;
 
     box-shadow:
