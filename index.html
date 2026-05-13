@@ -183,16 +183,23 @@ card.onclick = function() {
     }
 }
 
-let randomX =
-    Math.floor(Math.random() * 900);
+let column =
+    cardCount % 4;
 
-let randomY =
-    Math.floor(Math.random() * 700);
+let row =
+    Math.floor(cardCount / 4);
+
+let randomOffsetX =
+    Math.floor(Math.random() * 40);
+
+let randomOffsetY =
+    Math.floor(Math.random() * 40);
+
 card.style.left =
-    (50 + randomX) + "px";
+    (80 + column * 260 + randomOffsetX) + "px";
 
 card.style.top =
-    (50 + randomY) + "px";
+    (80 + row * 260 + randomOffsetY) + "px";
 
 cardCount++;
 
