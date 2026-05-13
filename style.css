@@ -518,11 +518,12 @@ inside the video tag.
 
     left: 50%;
 
-transform: translateX(-50%);
+    transform: translateX(-50%);
 
     overflow: hidden;
 
     z-index: 5;
+}
 }
 .video-monitor::after {
 
