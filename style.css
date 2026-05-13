@@ -508,3 +508,33 @@ You can later add:
 
     margin-left: 40px;
 }
+.video-monitor {
+
+    margin-top: 40px;
+
+    margin-left: 40px;
+}
+
+.video-monitor img {
+
+    width: 260px;
+
+    display: block;
+
+    border: 3px solid #70ff70;
+
+    box-shadow:
+    0 0 15px #70ff70,
+    0 0 30px rgba(0,255,0,0.5);
+}
+
+.monitor-label {
+
+    color: red;
+
+    font-size: 12px;
+
+    margin-top: 6px;
+
+    text-shadow: 0 0 5px red;
+}
