@@ -488,3 +488,23 @@ You can later add:
     0 0 5px red,
     0 0 10px red;
 }
+.video-monitor img {
+
+    width: 260px;
+
+    height: auto;
+
+    display: block;
+
+    border: 3px solid #70ff70;
+
+    box-shadow:
+    0 0 15px #70ff70,
+    0 0 30px rgba(0,255,0,0.5);
+}
+.video-monitor {
+
+    margin-top: 40px;
+
+    margin-left: 40px;
+}
