@@ -484,18 +484,6 @@ inside the video tag.
     0 0 15px #70ff70,
     0 0 30px rgba(0,255,0,0.5);
 }
-.video-monitor {
-
-    margin-top: 40px;
-
-    margin-left: 40px;
-}
-.video-monitor {
-
-    margin-top: 40px;
-
-    margin-left: 40px;
-}
 
 .video-monitor img {
 
@@ -508,16 +496,7 @@ inside the video tag.
     display: block;
 }
 
-.video-monitor {
 
-    overflow: hidden;
-}
-    border: 3px solid #70ff70;
-
-    box-shadow:
-    0 0 15px #70ff70,
-    0 0 30px rgba(0,255,0,0.5);
-}
 
 .monitor-label {
 
@@ -528,4 +507,35 @@ inside the video tag.
     margin-top: 6px;
 
     text-shadow: 0 0 5px red;
+}
+.video-monitor {
+
+    width: 190px;
+
+    padding: 3px;
+
+    background-color: black;
+
+    border: 3px solid #70ff70;
+
+    box-shadow:
+    0 0 15px #70ff70,
+    0 0 30px rgba(0,255,0,0.4);
+
+    position: absolute;
+
+    top: 45px;
+
+    left: 620px;
+
+    overflow: hidden;
+}
+
+.video-monitor img {
+
+    width: 100%;
+
+    display: block;
+
+    border: none;
 }
