@@ -438,3 +438,39 @@ You can later add:
 * multiple security feeds
 * weather warnings
 * police radio chatter
+
+.visitor-counter {
+
+    margin-top: 15px;
+
+    width: 220px;
+
+    padding: 8px;
+
+    border: 2px solid #70ff70;
+
+    background: rgba(0,0,0,0.9);
+
+    color: #70ff70;
+
+    font-size: 18px;
+
+    text-align: center;
+
+    box-shadow:
+    0 0 10px #70ff70,
+    0 0 20px rgba(0,255,0,0.4);
+
+    text-shadow: 0 0 5px #70ff70;
+}
+
+#counter {
+
+    color: red;
+
+    font-weight: bold;
+
+    text-shadow:
+    0 0 5px red,
+    0 0 10px red;
+}
