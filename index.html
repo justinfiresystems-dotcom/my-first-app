@@ -184,11 +184,10 @@ card.onclick = function() {
 }
 
 let randomX =
-    Math.floor(Math.random() * 700);
+    Math.floor(Math.random() * 900);
 
 let randomY =
-    Math.floor(Math.random() * 500);
-
+    Math.floor(Math.random() * 700);
 card.style.left =
     (50 + randomX) + "px";
 
@@ -198,6 +197,14 @@ card.style.top =
 cardCount++;
 
 board.appendChild(card);
+
+document.getElementById("name").value = "";
+
+document.getElementById("location").value = "";
+
+document.getElementById("story").value = "";
+
+document.getElementById("photo").value = "";
 }
 
 </script>
