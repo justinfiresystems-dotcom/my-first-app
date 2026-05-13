@@ -436,22 +436,6 @@ loop
 
 inside the video tag.
 
----
-
-# Optional Extra Effects Later
-
-You can later add:
-
-* VHS timestamp overlays
-* static flicker
-* camera labels
-* fake motion detection
-* blinking REC icon
-* distorted audio
-* CRT monitor glow
-* multiple security feeds
-* weather warnings
-* police radio chatter
 
 .visitor-counter {
 
@@ -492,10 +476,8 @@ You can later add:
 
     width: 260px;
 
-    height: auto;
-
     display: block;
-
+}
     border: 3px solid #70ff70;
 
     box-shadow:
